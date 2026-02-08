@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DarkCase — Профиль</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <h1>✦ DARKCASE ✦</h1>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="./index.html">Кейсы</a></li>
+      <li><a href="./inventory.html">Инвентарь</a></li>
+      <li><a href="./profile.html" class="active">Профиль</a></li>
+    </ul>
+  </nav>
+
+  <div class="stats-container">
+    <div class="stat-card">
+      <div class="stat-title">Монеты</div>
+      <div class="stat-value coins" id="coins-display">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Открыто кейсов</div>
+      <div class="stat-value cases" id="opened-cases">0</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-title">Скинов в инвентаре</div>
+      <div class="stat-value skins" id="skins-count">0</div>
+    </div>
+  </div>
+
+  <div class="promo-section">
+    <div class="promo-title">🎁 Активировать промокод</div>
+    <div class="promo-input-container">
+      <input type="text" id="promo-input" placeholder="Введите промокод">
+      <button class="promo-btn" onclick="activatePromo()">Активировать</button>
+    </div>
+    <div class="promo-status" id="promo-status"></div>
+
+    <div class="available-promos">
+      <p>Доступные промокоды:</p>
+      <p><span>WELCOME</span> — 500 монет</p>
+      <p><span>GAMER</span> — 1000 монет</p>
+      <p><span>DARKCASE</span> — 2000 монет</p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    window.onload = () => {
+      initializeGame();
+      document.getElementById("coins-display").textContent = userData.coins;
+      document.getElementById("opened-cases").textContent = userData.openedCases;
+      document.getElementById("skins-count").textContent = userData.inventory.length;
+    };
+  </script>
+</body>
+</html>

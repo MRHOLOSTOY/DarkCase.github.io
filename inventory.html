@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DarkCase — Инвентарь</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <h1>✦ DARKCASE ✦</h1>
+    </div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="./index.html">Кейсы</a></li>
+      <li><a href="./inventory.html" class="active">Инвентарь</a></li>
+      <li><a href="./profile.html">Профиль</a></li>
+    </ul>
+  </nav>
+
+  <div class="skins-list" id="skins-list">
+    <div class="empty-inventory">Инвентарь пуст. Открой кейсы, чтобы получить скины!</div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    window.onload = () => {
+      initializeGame();
+      renderInventory();
+    };
+  </script>
+</body>
+</html>

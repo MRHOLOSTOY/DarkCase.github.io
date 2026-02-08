@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DarkCase — Кейсы</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <h1>✦ DARKCASE ✦</h1>
+    </div>
+    <div class="coins" id="coins-count">0</div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="./index.html" class="active">Кейсы</a></li>
+      <li><a href="./inventory.html">Инвентарь</a></li>
+      <li><a href="./profile.html">Профиль</a></li>
+    </ul>
+  </nav>
+
+  <div class="cases-grid">
+    <div class="case-card case-1" onclick="openCase(1)">
+      <div class="case-image">📦</div>
+      <div class="case-name">Обычный</div>
+      <div class="case-price">100</div>
+    </div>
+    <div class="case-card case-2" onclick="openCase(2)">
+      <div class="case-image">🎁</div>
+      <div class="case-name">Редкий</div>
+      <div class="case-price">200</div>
+    </div>
+    <div class="case-card case-3" onclick="openCase(3)">
+      <div class="case-image">💎</div>
+      <div class="case-name">Эпический</div>
+      <div class="case-price">400</div>
+    </div>
+    <div class="case-card case-4" onclick="openCase(4)">
+      <div class="case-image">👑</div>
+      <div class="case-name">Легендарный</div>
+      <div class="case-price">600</div>
+    </div>
+    <div class="case-card case-5" onclick="openCase(5)">
+      <div class="case-image">✨</div>
+      <div class="case-name">Мифический</div>
+      <div class="case-price">1000</div>
+    </div>
+  </div>
+
+  <div class="loot-result" id="loot-result">
+    Открой кейс, чтобы получить скин!
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    window.onload = () => {
+      initializeGame();
+      document.getElementById("coins-count").textContent = userData.coins;
+    };
+  </script>
+</body>
+</html>
